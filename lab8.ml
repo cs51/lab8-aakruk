@@ -227,7 +227,6 @@ waiting for the publish event.
 let receive_report (news : string) : unit =
   ignore (WEvent.add_listener publish (fun () -> fakeNewsNetwork news));
   ignore (WEvent.add_listener publish (fun () -> buzzFake news));;
-;;
 
 (*......................................................................
 Exercise 10: Register the receieve_report listener to listen for the
